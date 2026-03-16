@@ -411,7 +411,7 @@ function initPortfolioViewMore() {
       card.hidden = expanded;
     });
     btn.setAttribute('aria-expanded', !expanded);
-    btn.textContent = expanded ? 'View 3 More Projects' : 'Show Less';
+    btn.textContent = expanded ? 'View More Projects' : 'Show Less';
   });
 }
 
@@ -426,7 +426,7 @@ function initBlogViewMore() {
       card.hidden = expanded;
     });
     btn.setAttribute('aria-expanded', !expanded);
-    btn.textContent = expanded ? 'View 3 More Posts' : 'Show Less';
+    btn.textContent = expanded ? 'View More Posts' : 'Show Less';
   });
 }
 
