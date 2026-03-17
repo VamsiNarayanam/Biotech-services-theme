@@ -11,17 +11,24 @@
 </head>
 <body>
 
+  <div id="preloader">
+    <div class="loader">
+        <img src="images/Blue_stackly_logo.webp" alt="Scientists in biotechnology lab" class="loader-img">
+        <p class="loading-text">Loading Stackly</p>
+    </div>
+</div>
+
   <header class="navbar">
     <div class="container">
       <a href="index.html" class="navbar__logo"><img src="images/Blue_stackly_logo.webp" alt="Biotechnology Services Logo"></a>
       <nav class="navbar__menu">
         <a href="index.html" class="navbar__link active">Home</a>
-        <a href="index.html#about" class="navbar__link">About</a>
-        <a href="index.html#services" class="navbar__link">Services</a>
-        <a href="index.html#portfolio" class="navbar__link">Portfolio</a>
-        <a href="index.html#innovation" class="navbar__link">Research</a>
-        <a href="index.html#pricing" class="navbar__link">Pricing</a>
-        <a href="index.html#contact" class="navbar__link">Contact</a>
+        <a href="about.html" class="navbar__link">About</a>
+        <a href="services.html" class="navbar__link">Services</a>
+        <a href="portfolio.html" class="navbar__link">Portfolio</a>
+        <a href="research.html" class="navbar__link">Research</a>
+        <a href="pricing.html" class="navbar__link">Pricing</a>
+        <a href="contact.html" class="navbar__link">Contact</a>
         <div class="navbar__menu-actions">
           <a href="login.html" class="btn btn-outline">Login</a>
           <a href="register.html" class="btn btn-primary">Get Started</a>
@@ -43,10 +50,10 @@
 
   <section class="hero hero--banner">
     <div class="hero__media">
-      <video class="hero__video" autoplay muted loop playsinline poster="images/Hero_biotech.webp">
+      <video class="hero__video" autoplay muted loop playsinline poster="images/Hero_biotecha.webp">
         <source src="https://cdn.coverr.co/videos/coverr-scientist-working-in-laboratory-4613256/4613256-1080p.mp4" type="video/mp4">
       </video>
-      <img class="hero__image-fallback" src="images/Hero_biotech.webp" alt="Biotechnology laboratory">
+      <img class="hero__image-fallback" src="images/Hero_biotecha.webp" alt="Biotechnology laboratory">
     </div>
     <div class="hero__overlay"></div>
     <div class="hero__content-wrap">
@@ -56,8 +63,8 @@
           <h1>Advancing Science with <span class="text-gradient">Biotechnology Innovation</span></h1>
           <p>We provide cutting-edge genomic research, diagnostic services, and biotechnology solutions to advance healthcare and scientific discovery.</p>
           <div class="hero__actions">
-            <a href="index.html#contact" class="btn btn-primary">Get Started</a>
-            <a href="index.html#services" class="btn btn-outline btn--light">Our Services</a>
+            <a href="404.html" class="btn btn-primary">Get Started</a>
+            <a href="404.html" class="btn btn-outline btn--light">Our Services</a>
           </div>
         </div>
       </div>
@@ -71,7 +78,7 @@
       <div class="section__header">
         <span class="section__subtitle">Our Services</span>
         <h2>Biotechnology Solutions</h2>
-        <p>Comprehensive genomic research, diagnostics, and biotechnology services for healthcare and life sciences.</p>
+        <p>End-to-end genomic research, diagnostics, and biotechnology services—from sample intake to regulatory-ready reports. We support academic labs, biotech startups, and pharmaceutical companies worldwide.</p>
       </div>
       <div class="services__grid">
         <article class="service-card">
@@ -79,7 +86,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/><path d="M12 6v6l4 2"/></svg>
           </div>
           <h3>Genomic Sequencing</h3>
-          <p>Next-generation sequencing and genomic analysis for research and personalized medicine applications.</p>
+          <p>Illumina and PacBio NGS, whole-genome and exome sequencing, RNA-seq, ChIP-seq, and methylation analysis. Turnaround 2–4 weeks with rush options. Quality metrics, QC reports, and raw data delivery included.</p>
           <a href="404.html">Learn more →</a>
         </article>
         <article class="service-card">
@@ -87,7 +94,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
           </div>
           <h3>Diagnostics & Testing</h3>
-          <p>Clinical diagnostics, biomarker analysis, and molecular testing services for accurate disease detection.</p>
+          <p>CAP/CLIA-certified molecular diagnostics: liquid biopsy, tumor profiling, germline and somatic variant analysis, rare disease panels. HIPAA-compliant reporting and EHR integration support.</p>
           <a href="404.html">Learn more →</a>
         </article>
         <article class="service-card">
@@ -95,7 +102,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
           </div>
           <h3>Drug Development</h3>
-          <p>Preclinical and clinical trial support, drug discovery research, and pharmaceutical development.</p>
+          <p>Preclinical and clinical trial support: pharmacokinetics, biomarker validation, MoA studies, IND-enabling assays. Custom assay development and GLP-compliant study design.</p>
           <a href="404.html">Learn more →</a>
         </article>
         <article class="service-card">
@@ -103,7 +110,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
           </div>
           <h3>Bioinformatics</h3>
-          <p>Data analysis, computational biology, and bioinformatics support for research projects.</p>
+          <p>Pipeline development, variant calling, differential expression, pathway analysis, machine learning for biomarkers. Secure cloud infrastructure and custom workflows.</p>
           <a href="404.html">Learn more →</a>
         </article>
         <article class="service-card">
@@ -111,7 +118,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
           <h3>Cell & Gene Therapy</h3>
-          <p>Advanced cell culture, gene editing support, and regenerative medicine research services.</p>
+          <p>Primary cell culture, iPSC derivation, CRISPR editing, vector production (AAV, lentivirus), potency assays, and analytical development for CMC and regulatory submissions.</p>
           <a href="404.html">Learn more →</a>
         </article>
         <article class="service-card">
@@ -119,7 +126,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
           </div>
           <h3>Regulatory Support</h3>
-          <p>FDA submissions, compliance consulting, and regulatory strategy for biotechnology products.</p>
+          <p>FDA pre-submission meetings, 510(k) and PMA support, IVD design controls, quality management systems, and regulatory strategy for US, EU, and global markets.</p>
           <a href="404.html">Learn more →</a>
         </article>
       </div>
@@ -128,34 +135,51 @@
 
   <section id="about" class="section about-section">
     <div class="container">
+      <div class="section__header" style="text-align: left; max-width: 100%; margin-bottom: 2rem;">
+        <span class="section__subtitle">About Us</span>
+        <h2>Leading Biotechnology Research & Services</h2>
+        <p>With over a decade of experience, we advance healthcare and life sciences through cutting-edge genomic research and diagnostic services. Our mission is to accelerate scientific discovery and improve patient outcomes through precision biotechnology.</p>
+      </div>
       <div class="about__grid">
         <div class="about__image">
           <img src="images/About_biotech.webp" alt="Scientists in biotechnology lab">
+          <div class="about__stats-inline">
+            <div><strong>12+</strong> Years Experience</div>
+            <div><strong>150+</strong> Projects Delivered</div>
+            <div><strong>50+</strong> Expert Scientists</div>
+          </div>
         </div>
         <div>
-          <span class="section__subtitle">About Us</span>
-          <h2>Leading Biotechnology Research & Services</h2>
-          <p>With over a decade of experience, we advance healthcare and life sciences through cutting-edge genomic research and diagnostic services. Our team of scientists and researchers delivers precision and innovation in every project.</p>
+          <h3 style="margin-bottom: 1rem; color: var(--text);">Our Story & Vision</h3>
+          <p>Founded in 2012, Stackly Biotechnology emerged from a vision to make advanced genomic and diagnostic technologies accessible to researchers, clinicians, and pharma partners. We combine deep domain expertise with state-of-the-art infrastructure to deliver reproducible, publication-ready results.</p>
+          <p style="margin-top: 1rem;">We partner with academic institutions, biotech startups, and pharmaceutical companies to drive discovery—from early-stage target identification through clinical validation and companion diagnostics.</p>
           <div class="about__features">
             <div class="about__feature">
               <div class="about__feature-icon">✓</div>
               <div>
                 <h4>Expert Scientists</h4>
-                <p>PhD researchers and lab specialists with industry experience</p>
+                <p>PhD researchers and lab specialists with industry experience across genomics, molecular biology, and bioinformatics</p>
               </div>
             </div>
             <div class="about__feature">
               <div class="about__feature-icon">✓</div>
               <div>
                 <h4>Certified Labs</h4>
-                <p>CAP-accredited facilities and GLP-compliant processes</p>
+                <p>CAP-accredited facilities, CLIA-certified for clinical testing, and GLP-compliant processes for regulatory submissions</p>
               </div>
             </div>
             <div class="about__feature">
               <div class="about__feature-icon">✓</div>
               <div>
                 <h4>24/7 Support</h4>
-                <p>Round-the-clock technical and clinical support</p>
+                <p>Round-the-clock technical support, dedicated project managers, and rapid turnaround on urgent requests</p>
+              </div>
+            </div>
+            <div class="about__feature">
+              <div class="about__feature-icon">✓</div>
+              <div>
+                <h4>Global Reach</h4>
+                <p>Sample logistics, international shipping, and partnerships with labs across North America, Europe, and Asia</p>
               </div>
             </div>
           </div>
@@ -217,7 +241,7 @@
       <div class="section__header">
         <span class="section__subtitle">Focus Areas</span>
         <h2>Research & Innovation</h2>
-        <p>Driving discovery and translation in life sciences through dedicated research programs.</p>
+        <p>From early discovery through IND submission—we bridge bench and bedside with rigorous science, validated assays, and collaborative R&D.</p>
       </div>
       <div class="innovation__grid">
         <article class="innovation-card">
@@ -226,7 +250,12 @@
           </div>
           <div class="innovation-card__content">
             <h3>Discovery Research</h3>
-            <p>High-throughput screening and target validation for new drug candidates and biomarkers. We combine genomics, proteomics, and phenotypic assays to identify and prioritize targets with strong therapeutic potential.</p>
+            <p>High-throughput screening (HTS), CRISPR screens, target validation, and mechanism-of-action studies. Integrate genomics (RNA-seq, ChIP-seq), proteomics, and phenotypic assays. Deliver prioritized target lists, dose-response data, and pathway analyses for publication or IP.</p>
+            <ul class="innovation-card__list">
+              <li>CRISPR knock-out/knock-in screens</li>
+              <li>Compound and antibody screening</li>
+              <li>Biomarker discovery & prioritization</li>
+            </ul>
             <a href="404.html">Learn more →</a>
           </div>
         </article>
@@ -236,7 +265,12 @@
           </div>
           <div class="innovation-card__content">
             <h3>Translational Science</h3>
-            <p>From in vitro and in vivo models to clinical-grade assays and biomarker studies. We support IND-enabling work, companion diagnostics, and proof-of-concept trials with validated, reproducible methods.</p>
+            <p>Bridge preclinical models and clinical trials. Develop and validate fit-for-purpose assays (ELISA, ddPCR, NGS panels), PD/PK biomarkers, and companion diagnostics. Support IND-enabling studies and proof-of-concept trials with GLP-compliant workflows.</p>
+            <ul class="innovation-card__list">
+              <li>Biomarker assay development & validation</li>
+              <li>PD/PK and MoA studies</li>
+              <li>Companion diagnostic design</li>
+            </ul>
             <a href="404.html">Learn more →</a>
           </div>
         </article>
@@ -246,7 +280,12 @@
           </div>
           <div class="innovation-card__content">
             <h3>Innovation Labs</h3>
-            <p>Shared lab space, core facilities, and joint R&amp;D with pharma and biotech partners. Access NGS, automation, and cell culture suites plus dedicated support for novel modalities and platform technologies.</p>
+            <p>Shared core facilities: NGS, flow cytometry, automation, and cell culture. Partner with pharma and biotech for joint R&D, pilot studies, and platform tech development. Flexible access—pay-per-use or dedicated bays for long-term programs.</p>
+            <ul class="innovation-card__list">
+              <li>NGS, Flow cytometry, automation</li>
+              <li>Cell culture & iPSC core</li>
+              <li>Custom assay development</li>
+            </ul>
             <a href="404.html">Learn more →</a>
           </div>
         </article>
@@ -259,7 +298,7 @@
       <div class="section__header">
         <span class="section__subtitle">Portfolio</span>
         <h2>Our Latest Projects</h2>
-        <p>Explore our recent research and see how we've advanced healthcare and life sciences.</p>
+        <p>Case studies and collaborations across oncology, rare disease, gene therapy, and precision medicine. Each project demonstrates our commitment to rigorous science and timely delivery.</p>
       </div>
       <div class="portfolio__grid">
         <article class="portfolio-card">
@@ -268,7 +307,8 @@
           </div>
           <div class="portfolio-card__overlay">
             <h4>Cancer Genomics Study</h4>
-            <span>Research</span>
+            <p>Whole-exome and RNA-seq for 500+ tumor samples; biomarker discovery and pathway analysis. Partner: Oncology research institute.</p>
+            <span>Research • NGS</span>
           </div>
         </article>
         <article class="portfolio-card">
@@ -277,16 +317,18 @@
           </div>
           <div class="portfolio-card__overlay">
             <h4>Rare Disease Diagnostics</h4>
-            <span>Diagnostics</span>
+            <p>Custom gene panel design, validation, and CLIA-certified testing for undiagnosed pediatric cases. 40% diagnostic yield achieved.</p>
+            <span>Diagnostics • Clinical</span>
           </div>
         </article>
         <article class="portfolio-card">
           <div class="portfolio-card__image">
-            <img src="images/Project_3.webp" alt="Gene Therapy">
+            <img src="images/Project_3a.webp" alt="Gene Therapy">
           </div>
           <div class="portfolio-card__overlay">
             <h4>Gene Therapy Program</h4>
-            <span>Drug Development</span>
+            <p>AAV vector analytics, potency assays, and stability studies supporting IND filing for neuromuscular disorder program.</p>
+            <span>Drug Development • CMC</span>
           </div>
         </article>
         <article class="portfolio-card portfolio-card--more" hidden>
@@ -295,7 +337,8 @@
           </div>
           <div class="portfolio-card__overlay">
             <h4>Bioinformatics Pipeline</h4>
-            <span>Bioinformatics</span>
+            <p>Cloud-based analysis workflow for multi-omics data; automated QC, reporting, and FDA 21 CFR Part 11–compliant audit trails.</p>
+            <span>Bioinformatics • Cloud</span>
           </div>
         </article>
         <article class="portfolio-card portfolio-card--more" hidden>
@@ -304,6 +347,7 @@
           </div>
           <div class="portfolio-card__overlay">
             <h4>Cell Therapy Research</h4>
+            <p>CAR-T characterization, release assays, and comparability studies for manufacturing process changes.</p>
             <span>Cell & Gene Therapy</span>
           </div>
         </article>
@@ -313,7 +357,8 @@
           </div>
           <div class="portfolio-card__overlay">
             <h4>Molecular Diagnostics Platform</h4>
-            <span>Diagnostics</span>
+            <p>Liquid biopsy assay development for minimal residual disease monitoring in hematologic malignancies.</p>
+            <span>Diagnostics • Liquid Biopsy</span>
           </div>
         </article>
       </div>
@@ -402,49 +447,53 @@
       <div class="section__header">
         <span class="section__subtitle">Pricing</span>
         <h2>Choose Your Plan</h2>
-        <p>Flexible service plans for researchers, clinics, and enterprises.</p>
+        <p>Transparent, scalable pricing for individual researchers, labs, and enterprises. Volume discounts and custom quotes available. All plans include secure data handling and HIPAA compliance.</p>
       </div>
       <div class="pricing__grid">
         <article class="pricing-card">
           <h3>Starter</h3>
-          <p class="pricing-card__desc">For individual researchers and small studies</p>
+          <p class="pricing-card__desc">Individual researchers, pilot studies, and small cohorts</p>
           <div class="pricing-card__price">$49 <span>/month</span></div>
           <ul class="pricing-card__features">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>5 Samples/Sequencing</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Basic Reports</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Email Support</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Standard Turnaround</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>5 samples/month (WES or RNA-seq)</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Basic QC reports and variant calls</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Email support (48h response)</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>2–4 week standard turnaround</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Raw FASTQ/BAM delivery</li>
           </ul>
-          <a href="404.html" class="btn btn-outline pricing-card__btn">Buy plan</a>
+          <a href="404.html" class="btn btn-outline pricing-card__btn">Buy Plan</a>
         </article>
         <article class="pricing-card featured">
           <span class="pricing-card__badge">Most Popular</span>
           <h3>Professional</h3>
-          <p class="pricing-card__desc">For research labs and clinics</p>
+          <p class="pricing-card__desc">Research labs, clinics, and mid-size studies</p>
           <div class="pricing-card__price">$99 <span>/month</span></div>
           <ul class="pricing-card__features">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>50 Samples/Month</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Advanced Reports</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Priority Support</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Bioinformatics Analysis</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Data Portal Access</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>50 samples/month (mix of assays)</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Advanced reports + bioinformatics analysis</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Priority support (24h response)</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Data portal &amp; API access</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Rush turnaround (extra fee)</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Dedicated project coordinator</li>
           </ul>
           <a href="404.html" class="btn btn-primary pricing-card__btn">Buy Plan</a>
         </article>
         <article class="pricing-card">
           <h3>Enterprise</h3>
-          <p class="pricing-card__desc">For pharma and large institutions</p>
+          <p class="pricing-card__desc">Pharma, large institutions, and high-volume programs</p>
           <div class="pricing-card__price">$199 <span>/month</span></div>
           <ul class="pricing-card__features">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Everything in Pro</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Unlimited Samples</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>24/7 Support</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Dedicated Account Manager</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Custom Workflows &amp; Regulatory</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Everything in Professional</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Unlimited samples (volume pricing)</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>24/7 support + SLA</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Dedicated account manager</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Custom pipelines &amp; regulatory support</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>On-site integration &amp; training</li>
           </ul>
           <a href="404.html" class="btn btn-outline pricing-card__btn">Buy Plan</a>
         </article>
       </div>
+      <p class="pricing-note">Need a custom quote ? <a href="contact.html">Contact us</a> for project-based pricing and volume discounts.</p>
     </div>
   </section>
 
@@ -491,7 +540,7 @@
           </div>
           <div class="blog-card__content">
             <span class="blog-card__meta">Mar 5, 2025 • Genomics</span>
-            <h3><a href="index.html#blog">The Future of Precision Medicine in 2025</a></h3>
+            <h3><a href="404.html">The Future of Precision Medicine in 2025</a></h3>
             <p>Explore how genomic insights are reshaping personalized healthcare and drug development.</p>
           </div>
         </article>
@@ -501,17 +550,17 @@
           </div>
           <div class="blog-card__content">
             <span class="blog-card__meta">Mar 1, 2025 • Diagnostics</span>
-            <h3><a href="index.html#blog">Best Practices for NGS Quality Control</a></h3>
+            <h3><a href="404.html">Best Practices for NGS Quality Control</a></h3>
             <p>Learn how to ensure accurate and reproducible sequencing results in your lab.</p>
           </div>
         </article>
         <article class="blog-card">
           <div class="blog-card__image">
-            <img src="images/Blog_3.webp" alt="Gene Editing">
+            <img src="images/Blog_3a.webp" alt="Gene Editing">
           </div>
           <div class="blog-card__content">
             <span class="blog-card__meta">Feb 25, 2025 • Research</span>
-            <h3><a href="index.html#blog">Advances in CRISPR and Gene Therapy</a></h3>
+            <h3><a href="404.html">Advances in CRISPR and Gene Therapy</a></h3>
             <p>Latest breakthroughs in gene editing and their implications for therapeutic development.</p>
           </div>
         </article>
@@ -521,7 +570,7 @@
           </div>
           <div class="blog-card__content">
             <span class="blog-card__meta">Feb 20, 2025 • Bioinformatics</span>
-            <h3><a href="index.html#blog">Building Scalable Bioinformatics Pipelines</a></h3>
+            <h3><a href="404.html">Building Scalable Bioinformatics Pipelines</a></h3>
             <p>How to design and run reproducible analysis workflows for genomics and proteomics.</p>
           </div>
         </article>
@@ -531,7 +580,7 @@
           </div>
           <div class="blog-card__content">
             <span class="blog-card__meta">Feb 15, 2025 • Cell Therapy</span>
-            <h3><a href="index.html#blog">Cell and Gene Therapy Regulatory Update</a></h3>
+            <h3><a href="404.html">Cell and Gene Therapy Regulatory Update</a></h3>
             <p>Current regulatory landscape and approval pathways for advanced therapies.</p>
           </div>
         </article>
@@ -541,7 +590,7 @@
           </div>
           <div class="blog-card__content">
             <span class="blog-card__meta">Feb 10, 2025 • Diagnostics</span>
-            <h3><a href="index.html#blog">Liquid Biopsy and Early Cancer Detection</a></h3>
+            <h3><a href="404.html">Liquid Biopsy and Early Cancer Detection</a></h3>
             <p>Emerging applications of liquid biopsy in screening and monitoring cancer.</p>
           </div>
         </article>
@@ -556,7 +605,7 @@
     <div class="container">
       <h2>Ready to Start Your Research?</h2>
       <p>Let's discuss how we can support your project. Get in touch today for a free consultation.</p>
-      <a href="contact.html" class="btn btn-primary">Contact Us</a>
+      <a href="404.html" class="btn btn-primary">Get in Touch</a>
     </div>
   </section>
 
@@ -567,18 +616,18 @@
           <a href="index.html" class="navbar__logo"><img src="images/Blue_stackly_logo.webp" alt="Biotechnology Services Logo"></a>
           <p>Advanced biotechnology research, genomics, and diagnostic services for healthcare and life sciences.</p>
           <div class="footer__social">
-            <a href="#" aria-label="Twitter"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-            <a href="#" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-            <a href="#" aria-label="GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
-            <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            <a href="404.html" aria-label="Twitter"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="404.html" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+            <a href="404.html" aria-label="GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+            <a href="404.html" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
           </div>
         </div>
         <div class="footer__links">
           <h4>Company</h4>
           <ul>
-            <li><a href="index.html#about">About</a></li>
-            <li><a href="index.html#services">Services</a></li>
-            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
@@ -586,8 +635,8 @@
           <h4>Resources</h4>
           <ul>
             <li><a href="index.html#blog">Blog</a></li>
-            <li><a href="index.html#pricing">Pricing</a></li>
-            <li><a href="index.html#innovation">Research</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="research.html">Research</a></li>
             <li><a href="404.html">Support</a></li>
           </ul>
         </div>

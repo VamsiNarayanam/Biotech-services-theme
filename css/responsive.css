@@ -49,6 +49,31 @@
     padding: 120px 0 60px;
   }
 
+  .inner-page .page-header {
+    padding: 100px 0 60px;
+  }
+
+  .inner-page .section {
+    padding: 60px 0;
+  }
+
+  .inner-page .process__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .inner-page .innovation__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .inner-page .clients__grid {
+    gap: 1.5rem;
+  }
+
+  .inner-page .clients__item {
+    font-size: 1.1rem;
+    padding: 0.75rem 1rem;
+  }
+
   .contact__info-row {
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -200,10 +225,10 @@
   }
 
   .navbar__actions {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    z-index: 1001;
+    position: relative;
+    top: auto;
+    right: auto;
+    z-index: auto;
   }
 
   .navbar__actions .btn-outline {
@@ -272,6 +297,41 @@
 
   .tech__item span {
     font-size: 0.8rem;
+  }
+
+  .inner-page .service-card {
+    padding: 2rem;
+  }
+
+  .inner-page .pricing-card {
+    padding: 2.25rem 1.75rem;
+  }
+
+  .inner-page .pricing-card.featured {
+    transform: none;
+  }
+
+  .inner-page .pricing-card.featured:hover {
+    transform: translateY(-10px);
+  }
+
+  .inner-page .tech__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .inner-page .tech__item {
+    padding: 1rem 0.75rem;
+  }
+
+  .inner-page .tech__icon {
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+    min-height: 64px;
+  }
+
+  .inner-page .tech__item span {
+    font-size: 0.85rem;
   }
 
   .portfolio__grid {
@@ -442,6 +502,33 @@
   .portfolio-card,
   .blog-card {
     padding: 1.5rem;
+  }
+
+  .inner-page .page-header p {
+    font-size: 1.05rem;
+  }
+
+  .inner-page .service-card {
+    padding: 1.75rem;
+  }
+
+  .inner-page .pricing-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .inner-page .tech__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .inner-page .tech__icon {
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
+    min-height: 58px;
+  }
+
+  .inner-page .tech__item span {
+    font-size: 0.8rem;
   }
 
   .testimonial-card {

@@ -1,3 +1,16 @@
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+
+    setTimeout(() => {
+        preloader.style.opacity = '0';
+
+        setTimeout(() => {
+            preloader.style.display = 'none';
+        }, 500);
+
+    }, 1000);
+});
+
 document.addEventListener('DOMContentLoaded', function() {
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
@@ -365,12 +378,13 @@ function initRegisterForm() {
     const role = form.querySelector('select[name="role"]');
     const name = form.querySelector('input[name="name"]');
     const email = form.querySelector('input[type="email"]');
-    const password = form.querySelectorAll('input[type="password"]');
+    const password = form.querySelector('input[name="password"]');
+    const confirmPassword = form.querySelector('input[name="confirmPassword"]');
     const roleVal = role ? role.value.trim() : '';
     const nameVal = name ? name.value.trim() : '';
     const emailVal = email ? email.value.trim() : '';
-    const passVal = password[0] ? password[0].value.trim() : '';
-    const confirmVal = password[1] ? password[1].value.trim() : '';
+    const passVal = password ? password.value.trim() : '';
+    const confirmVal = confirmPassword ? confirmPassword.value.trim() : '';
 
     if (msgEl) {
       msgEl.hidden = false;
@@ -382,23 +396,24 @@ function initRegisterForm() {
       if (msgEl) msgEl.textContent = 'Please fill in all fields including role';
       return;
     }
+
     if (passVal !== confirmVal) {
       if (msgEl) msgEl.textContent = 'Passwords do not match';
       return;
     }
-    sessionStorage.setItem('userRole', roleVal);
-    sessionStorage.setItem('userName', nameVal);
+
     if (msgEl) {
       msgEl.hidden = false;
       msgEl.classList.remove('auth-message--error');
       msgEl.classList.add('auth-message--success');
-      msgEl.textContent = 'Registration successful! Redirecting...';
+      msgEl.textContent = '✓ Registration successful! Redirecting...';
     }
     setTimeout(function() {
       window.location.href = './404.html';
-    }, 800);
+    }, 3000);
   });
 }
+
 
 function initPortfolioViewMore() {
   const btn = document.getElementById('portfolioViewMore');
