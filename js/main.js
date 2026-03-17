@@ -1,15 +1,19 @@
 window.addEventListener('load', () => {
     const preloader = document.getElementById('preloader');
+    if (!preloader) return;
 
     setTimeout(() => {
-        preloader.style.opacity = '0';
-
-        setTimeout(() => {
-            preloader.style.display = 'none';
-        }, 500);
-
+        preloader.classList.add('hidden');
     }, 1000);
 });
+
+// Fallback: Hide preloader if page takes too long
+setTimeout(() => {
+    const preloader = document.getElementById('preloader');
+    if (preloader && !preloader.classList.contains('hidden')) {
+        preloader.classList.add('hidden');
+    }
+}, 5000);
 
 document.addEventListener('DOMContentLoaded', function() {
   const savedTheme = localStorage.getItem('theme');
