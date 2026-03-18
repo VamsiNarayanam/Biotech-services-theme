@@ -7,7 +7,6 @@ window.addEventListener('load', () => {
     }, 1000);
 });
 
-// Fallback: Hide preloader if page takes too long
 setTimeout(() => {
     const preloader = document.getElementById('preloader');
     if (preloader && !preloader.classList.contains('hidden')) {
@@ -31,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initContactForm();
   initLoginForm();
   initRegisterForm();
+  initNewsletterForm();
   initScrollReveal();
   initPortfolioViewMore();
   initBlogViewMore();
@@ -291,45 +291,80 @@ function initFAQ() {
 }
 
 function initContactForm() {
-  const form = document.querySelector('.contact-form');
+  const form = document.getElementById('contactForm');
   if (!form) return;
 
+  const msgEl = document.getElementById('contactMessage');
+  
   form.addEventListener('submit', function(e) {
     e.preventDefault();
+    
+    const name = form.querySelector('input[name="name"]');
+    const email = form.querySelector('input[type="email"]');
+    const subject = form.querySelector('input[name="subject"]');
+    const message = form.querySelector('textarea[name="message"]');
+    
+    const nameVal = name ? name.value.trim() : '';
+    const emailVal = email ? email.value.trim() : '';
+    const subjectVal = subject ? subject.value.trim() : '';
+    const messageVal = message ? message.value.trim() : '';
+    
+    form.querySelectorAll('.form-group__error').forEach(el => el.textContent = '');
+    
     let isValid = true;
-    form.querySelectorAll('.form-group').forEach(group => {
-      const input = group.querySelector('input, textarea');
-      const errorMsg = group.querySelector('.error-message');
-      if (!input) return;
-      if (errorMsg) errorMsg.remove();
-
-      const value = input.value.trim();
-      const required = input.hasAttribute('required');
-
-      if (required && !value) {
-        isValid = false;
-        showError(group, 'This field is required', input);
-      } else if (input.type === 'email' && value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
-        isValid = false;
-        showError(group, 'Please enter a valid email address', input);
-      } else {
-        input.classList.remove('error');
-      }
-    });
-
-    if (isValid) {
-      form.reset();
-      window.location.href = '404.html';
+    
+    if (!nameVal) {
+      name.parentElement.querySelector('.form-group__error').textContent = 'Name is required';
+      isValid = false;
     }
-  });
-}
+    
+    if (!emailVal) {
+      email.parentElement.querySelector('.form-group__error').textContent = 'Email is required';
+      isValid = false;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
+      email.parentElement.querySelector('.form-group__error').textContent = 'Please enter a valid email';
+      isValid = false;
+    }
+    
+    if (!subjectVal) {
+      subject.parentElement.querySelector('.form-group__error').textContent = 'Subject is required';
+      isValid = false;
+    }
+    
+    if (!messageVal) {
+      message.parentElement.querySelector('.form-group__error').textContent = 'Message is required';
+      isValid = false;
+    }
+    
+    if (!isValid) {
+      if (msgEl) {
+        msgEl.hidden = false;
+        msgEl.classList.remove('auth-message--success');
+        msgEl.classList.add('auth-message--error');
+        msgEl.textContent = 'Please fill in all required fields correctly';
+      }
+      return;
+    }
+    
+   
+    if (msgEl) {
+      msgEl.hidden = false;
+      msgEl.classList.remove('auth-message--error');
+      msgEl.classList.add('auth-message--success');
+      msgEl.textContent = '✓ Message sent successfully! Redirecting...';
+      
 
-function showError(group, message, input) {
-  input.classList.add('error');
-  const errorEl = document.createElement('span');
-  errorEl.className = 'error-message';
-  errorEl.textContent = message;
-  group.appendChild(errorEl);
+      msgEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+    
+
+    form.reset();
+    
+    setTimeout(function() {
+      window.location.href = './404.html';
+    }, 3000);
+
+  });
 }
 
 function initLoginForm() {
@@ -337,38 +372,85 @@ function initLoginForm() {
   if (!form) return;
 
   const msgEl = document.getElementById('authMessage');
+
   form.addEventListener('submit', function(e) {
     e.preventDefault();
-    const role = form.querySelector('select[name="role"]');
-    const username = form.querySelector('input[name="username"]');
-    const email = form.querySelector('input[type="email"]');
-    const password = form.querySelector('input[type="password"]');
+
+    const role = form.querySelector('#role');
+    const username = form.querySelector('#username');
+    const email = form.querySelector('#email');
+    const password = form.querySelector('#password');
+
     const roleVal = role ? role.value.trim() : '';
     const usernameVal = username ? username.value.trim() : '';
     const emailVal = email ? email.value.trim() : '';
-    const passVal = password ? password.value.trim() : '';
+    const passwordVal = password ? password.value.trim() : '';
 
-    if (msgEl) {
-      msgEl.hidden = false;
-      msgEl.classList.remove('auth-message--success');
-      msgEl.classList.add('auth-message--error');
+   
+    form.querySelectorAll('.form-group__error').forEach(el => el.textContent = '');
+
+    let isValid = true;
+
+    
+    if (!roleVal) {
+      role.parentElement.querySelector('.form-group__error').textContent = 'Please select a role';
+      isValid = false;
     }
 
-    if (!roleVal || !usernameVal || !emailVal || !passVal) {
-      if (msgEl) msgEl.textContent = 'Please fill in all fields including role and username';
+
+    if (!usernameVal) {
+      username.parentElement.querySelector('.form-group__error').textContent = 'Username is required';
+      isValid = false;
+    }
+
+  
+    if (!emailVal) {
+      email.parentElement.querySelector('.form-group__error').textContent = 'Email is required';
+      isValid = false;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
+      email.parentElement.querySelector('.form-group__error').textContent = 'Please enter a valid email';
+      isValid = false;
+    }
+
+    if (!passwordVal) {
+      password.parentElement.querySelector('.form-group__error').textContent = 'Password is required';
+      isValid = false;
+    } else if (passwordVal.length < 6) {
+      password.parentElement.querySelector('.form-group__error').textContent = 'Password must be at least 6 characters';
+      isValid = false;
+    }
+
+  
+    if (!isValid) {
+      if (msgEl) {
+        msgEl.hidden = false;
+        msgEl.classList.remove('auth-message--success');
+        msgEl.classList.add('auth-message--error');
+        msgEl.textContent = 'Please fill all fields correctly';
+      }
       return;
     }
-    sessionStorage.setItem('userRole', roleVal);
-    sessionStorage.setItem('userName', usernameVal);
+
+
     if (msgEl) {
       msgEl.hidden = false;
       msgEl.classList.remove('auth-message--error');
       msgEl.classList.add('auth-message--success');
       msgEl.textContent = 'Login successful! Redirecting to dashboard...';
+
+      msgEl.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      });
     }
+
+    sessionStorage.setItem('userRole', roleVal);
+    sessionStorage.setItem('userName', usernameVal);
+
+
     setTimeout(function() {
       window.location.href = './dashboard.html';
-    }, 800);
+    }, 3000);
   });
 }
 
@@ -377,32 +459,70 @@ function initRegisterForm() {
   if (!form) return;
 
   const msgEl = document.getElementById('authMessage');
-  form.addEventListener('submit', function(e) {
+
+  form.addEventListener('submit', function (e) {
     e.preventDefault();
-    const role = form.querySelector('select[name="role"]');
-    const name = form.querySelector('input[name="name"]');
-    const email = form.querySelector('input[type="email"]');
-    const password = form.querySelector('input[name="password"]');
-    const confirmPassword = form.querySelector('input[name="confirmPassword"]');
-    const roleVal = role ? role.value.trim() : '';
-    const nameVal = name ? name.value.trim() : '';
-    const emailVal = email ? email.value.trim() : '';
-    const passVal = password ? password.value.trim() : '';
-    const confirmVal = confirmPassword ? confirmPassword.value.trim() : '';
 
-    if (msgEl) {
-      msgEl.hidden = false;
-      msgEl.classList.remove('auth-message--success');
-      msgEl.classList.add('auth-message--error');
+    const role = form.querySelector('#role');
+    const name = form.querySelector('#name');
+    const email = form.querySelector('#email');
+    const password = form.querySelector('#password');
+    const confirm = form.querySelector('#confirm');
+
+    const roleVal = role.value.trim();
+    const nameVal = name.value.trim();
+    const emailVal = email.value.trim();
+    const passwordVal = password.value.trim();
+    const confirmVal = confirm.value.trim();
+
+    form.querySelectorAll('.form-group__error').forEach(el => el.textContent = '');
+
+    let isValid = true;
+
+    if (!roleVal) {
+      role.parentElement.querySelector('.form-group__error').textContent = 'Please select a role';
+      isValid = false;
     }
 
-    if (!roleVal || !nameVal || !emailVal || !passVal || !confirmVal) {
-      if (msgEl) msgEl.textContent = 'Please fill in all fields including role';
-      return;
+    if (!nameVal) {
+      name.parentElement.querySelector('.form-group__error').textContent = 'Name is required';
+      isValid = false;
     }
 
-    if (passVal !== confirmVal) {
-      if (msgEl) msgEl.textContent = 'Passwords do not match';
+ 
+    if (!emailVal) {
+      email.parentElement.querySelector('.form-group__error').textContent = 'Email is required';
+      isValid = false;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
+      email.parentElement.querySelector('.form-group__error').textContent = 'Enter valid email';
+      isValid = false;
+    }
+
+
+    if (!passwordVal) {
+      password.parentElement.querySelector('.form-group__error').textContent = 'Password is required';
+      isValid = false;
+    } else if (passwordVal.length < 6) {
+      password.parentElement.querySelector('.form-group__error').textContent = 'Password must be at least 6 characters';
+      isValid = false;
+    }
+
+    if (!confirmVal) {
+      confirm.parentElement.querySelector('.form-group__error').textContent = 'Confirm password is required';
+      isValid = false;
+    } else if (passwordVal !== confirmVal) {
+      confirm.parentElement.querySelector('.form-group__error').textContent = 'Passwords do not match';
+      isValid = false;
+    }
+
+
+    if (!isValid) {
+      if (msgEl) {
+        msgEl.hidden = false;
+        msgEl.classList.remove('auth-message--success');
+        msgEl.classList.add('auth-message--error');
+        msgEl.textContent = 'Please fill all fields correctly';
+      }
       return;
     }
 
@@ -411,13 +531,80 @@ function initRegisterForm() {
       msgEl.classList.remove('auth-message--error');
       msgEl.classList.add('auth-message--success');
       msgEl.textContent = '✓ Registration successful! Redirecting...';
+
+      msgEl.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      });
     }
-    setTimeout(function() {
+
+    form.reset();
+
+    setTimeout(function () {
       window.location.href = './404.html';
     }, 3000);
   });
 }
 
+function initNewsletterForm() {
+  const form = document.getElementById('newsletterForm');
+  if (!form) return;
+
+  const msgEl = document.getElementById('newsletterMessage');
+  const emailInput = document.getElementById('newsletterEmail');
+  const errorSpan = form.querySelector('.newsletter__form-error');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const emailVal = emailInput ? emailInput.value.trim() : '';
+
+    if (errorSpan) {
+      errorSpan.textContent = '';
+      errorSpan.classList.remove('show');
+    }
+
+    let isValid = true;
+
+    if (!emailVal) {
+      if (errorSpan) {
+        errorSpan.textContent = 'Email is required';
+        errorSpan.classList.add('show');
+      }
+      isValid = false;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
+      if (errorSpan) {
+        errorSpan.textContent = 'Please enter a valid email address';
+        errorSpan.classList.add('show');
+      }
+      isValid = false;
+    }
+
+    if (!isValid) {
+      if (msgEl) {
+        msgEl.hidden = false;
+        msgEl.classList.remove('auth-message--success');
+        msgEl.classList.add('auth-message--error');
+        msgEl.textContent = 'Please enter a valid email address';
+      }
+      return;
+    }
+
+    if (msgEl) {
+      msgEl.hidden = false;
+      msgEl.classList.remove('auth-message--error');
+      msgEl.classList.add('auth-message--success');
+      msgEl.textContent = '✓ Successfully subscribed! Check your email for confirmation.';
+
+      msgEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    form.reset();
+    if (errorSpan) {
+      errorSpan.classList.remove('show');
+    }
+  });
+}
 
 function initPortfolioViewMore() {
   const btn = document.getElementById('portfolioViewMore');

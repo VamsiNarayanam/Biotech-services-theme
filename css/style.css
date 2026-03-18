@@ -177,6 +177,8 @@ body {
   background-color: var(--white);
   overflow-x: hidden;
   transition: var(--transition);
+  padding-top: 70px;
+  scroll-padding-top: 70px;
 }
 
 img {
@@ -1889,6 +1891,113 @@ h4 { font-size: 1.25rem; }
   box-shadow: 0 8px 24px rgba(99, 102, 241, 0.5);
 }
 
+
+.newsletter-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(14, 165, 233, 0.05) 100%);
+}
+
+[data-theme="dark"] .newsletter-section {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.12) 0%, rgba(14, 165, 233, 0.08) 100%);
+}
+
+.newsletter__content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.newsletter__content h2 {
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.newsletter__content > p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
+.newsletter__form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.newsletter__input-group {
+  display: flex;
+  gap: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.1);
+  background: white;
+}
+
+[data-theme="dark"] .newsletter__input-group {
+  background: var(--dark-alt);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+}
+
+.newsletter__input-group input {
+  flex: 1;
+  padding: 14px 20px;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  font-size: 1rem;
+  outline: none;
+}
+
+.newsletter__input-group input::placeholder {
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .newsletter__input-group input {
+  color: white;
+}
+
+[data-theme="dark"] .newsletter__input-group input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.newsletter__input-group button {
+  padding: 14px 32px;
+  background: var(--gradient-1);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.newsletter__input-group button:hover {
+  opacity: 0.95;
+  transform: translateY(-2px);
+}
+
+.newsletter__input-group button:active {
+  transform: translateY(0);
+}
+
+.newsletter__form-error {
+  display: none;
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: left;
+  padding: 0 2px;
+}
+
+.newsletter__form-error.show {
+  display: block;
+}
+
+.newsletter__disclaimer {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 1.5rem;
+}
 
 .footer {
   background: var(--dark);
