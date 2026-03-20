@@ -1001,6 +1001,26 @@ h4 { font-size: 1.25rem; }
   gap: 12px;
 }
 
+a.service-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.service-card__link {
+  font-weight: 600;
+  color: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 0.5rem;
+}
+
+a.service-card:hover .service-card__link {
+  gap: 12px;
+}
+
 .about__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
